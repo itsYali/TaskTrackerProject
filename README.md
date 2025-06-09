@@ -1,46 +1,40 @@
-# Open-Source-Final-Project  
-## Goal  
-A Web Application With Relational Database  
-- Concentrate on the server-side scripting and limit the use of the client-side scripting  
-- Use relational database and go through the schema design process  
+# Task Tracker
 
-## Requirements  
+A simple web-based task management app built with PHP and MariaDB for tracking personal tasks.
 
-**Source code publishing**: GitHub or GitLab, including the entry markdown pages (not limited to these):  
-- `README.md`  
-  - Description of your project  
-- `Contributors.md`  
-  - List of the members  
-- `Installation.md`  
-  - Installation instructions  
-  - Professor will follow the instructions to verify whether it is installable  
-- `UserGuide.md`  
-  - Describe how to use the application  
-- `AdminGuide.md`  
-  - Describe how to configure the application  
-  - Describe how to maintain the application  
+## Description
 
-**Hardware platform**: RPi0 2W  
+Task Tracker is a simple web app that allows users to manage their daily tasks. Users can register accounts, add tasks with target dates, mark tasks as completed, and filter tasks by their status. The app focuses on server-side functionality using PHP and maintains data integrity through a relational database.
 
-**Run-time**:  
-- HTTP server  
-- PHP scripting engine (and no other scripting engines)  
-- MariaDB  
+## Features
 
-## Deliverables  
+- User registration and login system
+- Add, view, and manage personal tasks
+- Set target dates for tasks
+- Mark tasks as completed
+- Filter tasks by status (completed, incomplete, overdue, upcoming)
+- // Secure password handling
+- // Session management
+- // Responsive web interface
 
-**Source code repository**  
-- Tag the presented version as "FINAL_PRESENTATION". Any further development is excluded from the assessment.  
+## Technology Stack
 
-**Presentation Slides in PDF (Upload the file to Moodle)**  
-- Also have a copy in the `doc/` directory of your repository  
-- With a link to your source code repository  
-- With a link to your presentation video  
-- Explain the design of your application: architecture, modules, schema, etc.  
-- Demonstrate the use (you may skip the installation) of the application  
+- **Backend**: PHP 7.4+
+- **Database**: MariaDB/MySQL
+- **Frontend**: HTML5, CSS3, JavaScript (minimal client-side scripting)
+- **Web Server**: Apache2
+- **Platform**: Raspberry Pi Zero 2W
 
-**Presentation Video**  
-- No more than 10 minutes  
-- Publish on some video platform, e.g., YouTube  
-- Submitted and tagged before Week 18  
-- We will watch the presentation videos in Week 18  
+
+## Quick Start
+
+1. Follow the install instructions in `Installation.md`
+2. Set up the database using `database_setup.sql`
+3. Configure database connection in `config/database.php`
+4. Access the application through a web browser
+
+## Documentation
+
+- [Installation Guide](Installation.md) - Setup instructions for Raspberry Pi
+- [User Guide](UserGuide.md) - How to use the application
+- [Admin Guide](AdminGuide.md) - Configuration and maintenance
