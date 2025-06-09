@@ -13,11 +13,10 @@ Task Tracker is a simple web app that allows users to manage their daily tasks. 
 - Set target dates for tasks
 - Mark tasks as completed
 - Filter tasks by status (completed, incomplete, overdue, upcoming)
-- // Secure password handling
-- // Session management
-- // Responsive web interface
+- Secure password handling
+- Session management
 
-## Technology Stack
+## Stack
 
 - **Backend**: PHP 7.4+
 - **Database**: MariaDB/MySQL
