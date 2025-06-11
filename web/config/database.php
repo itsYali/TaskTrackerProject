@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost';
+$host = '0.0.0.0';
 $dbname = 'task_tracker';
 $username = 'root';
 $password = '';
