@@ -22,7 +22,7 @@ Task Tracker is a simple web app that allows users to manage their daily tasks. 
 - **Backend**: PHP 7.4+
 - **Database**: MariaDB/MySQL
 - **Frontend**: HTML5, CSS3, JavaScript (minimal client-side scripting)
-- **Web Server**: Apache2
+- **Web Server**: PHP built-in
 - **Platform**: Raspberry Pi Zero 2W
 
 
