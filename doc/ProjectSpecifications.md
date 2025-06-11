@@ -7,28 +7,26 @@
 **Core Features to Demonstrate:**
 - **User Authentication System**: Complete registration and login functionality with session management
 - **Task Management**: Add new tasks with names and target dates
-- **Task Status Tracking**: Mark tasks as complete/incomplete 
-- **Task Filtering**: Filter tasks by status (all, completed, incomplete, overdue, upcoming)
+- **Task Status Tracking**: Mark tasks as complete
+- **Task Filtering**: Filter tasks by status (all, completed, incomplete)
 - **Personal Dashboard**: User-specific task lists
 - **Data Validation**: Form validation for user input and for handling errors
 
 ### What user actions will be shown?
 
 **Demonstration Flow:**
-1. **New User Registration**: Create account with username, email, and password
+1. **New User Registration**: Create account with username and password
 2. **User Login**: Authenticate existing user and establish session
 3. **Add Multiple Tasks**: Create tasks with different target dates (past, present, future)
 4. **Task Completion**: Mark several tasks as completed to show status changes
-5. **Filter Demonstration**: Show all filter options (completed, incomplete, overdue, upcoming)
+5. **Filter Demonstration**: Show all filter options (completed, incomplete)
 6. **Session Management**: Demonstrate logout and login persistence
 
 ### What parts of the application will be functional?
 
 **Fully Functional Components:**
-- Complete user registration and authentication system
+- User registration and login system
 - Session-based user management
-- Full CRUD operations for tasks (Create, Read, Update status)
-- Dynamic content generation based on user data
 - Real-time filtering with database queries
 - Form validation and error handling
 - Responsive navigation based on authentication status
@@ -43,7 +41,7 @@
 | URL Path | HTTP Method(s) | Expected Variables | Session Variables | Database Operations |
 |----------|----------------|-------------------|-------------------|-------------------|
 | `/index.php` | GET | None | `user_id`, `username` (optional) | None |
-| `/register.php` | GET, POST | POST: `username`, `email`, `password`, `confirm_password` | None initially | INSERT into `users` table |
+| `/register.php` | GET, POST | POST: `username`, `password`, `confirm_password` | None initially | INSERT into `users` table |
 | `/login.php` | GET, POST | POST: `username`, `password` | Sets `user_id`, `username` | SELECT from `users` table |
 | `/dashboard.php` | GET | GET: `filter` (optional) | Requires `user_id`, `username` | SELECT from `tasks` table with filters |
 | `/add_task.php` | GET, POST | POST: `task_name`, `target_date` | Requires `user_id` | INSERT into `tasks` table |
@@ -100,12 +98,8 @@
    - Maintains data consistency across related tables
 
 4. **Redundancy Elimination**:
-   - Task completion status uses boolean field rather than string
+   - Task completion status uses boolean rather than string
    - Automatic timestamp management prevents manual date entry errors
-
-5. **Null Handling**:
-   - `completed_date` allows NULL values for incomplete tasks
-   - Prevents storage of meaningless placeholder dates
 
 This design helps the PHP app to process user authentication, task management logic, and generate dynamic content while maintaining data integrity in MariaDB.
 

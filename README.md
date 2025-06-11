@@ -12,9 +12,9 @@ Task Tracker is a simple web app that allows users to manage their daily tasks. 
 - Add, view, and manage personal tasks
 - Set target dates for tasks
 - Mark tasks as completed
-- Filter tasks by status (completed, incomplete, overdue, upcoming) ***(not yet implemented)***
-- Secure password handling ***(not yet implemented)***
-- Session management ***(not yet implemented)***
+- Filter tasks by status (completed, incomplete)
+- Secure password handling
+- Session management
 
 
 ## Stack
@@ -22,7 +22,7 @@ Task Tracker is a simple web app that allows users to manage their daily tasks. 
 - **Backend**: PHP 7.4+
 - **Database**: MariaDB/MySQL
 - **Frontend**: HTML5, CSS3, JavaScript (minimal client-side scripting)
-- **Web Server**: Apache2
+- **Web Server**: PHP built-in
 - **Platform**: Raspberry Pi Zero 2W
 
 
@@ -35,6 +35,6 @@ Task Tracker is a simple web app that allows users to manage their daily tasks. 
 
 ## Documentation
 
-- [Installation Guide](Installation.md) - Setup instructions for Raspberry Pi
+- [Installation Guide](Installation.md) - Setup instructions
 - [User Guide](UserGuide.md) - How to use the application
 - [Admin Guide](AdminGuide.md) - Configuration and maintenance
