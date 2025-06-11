@@ -1,6 +1,6 @@
 # Project Goal
 
-## Project Title **Task Tracker**
+## Project Title: Task Tracker
 
 ## High-Level Functionalities
 - Users can add tasks, set target dates, and mark tasks as completed
