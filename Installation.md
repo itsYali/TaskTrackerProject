@@ -25,7 +25,7 @@
 5. **Start the Server**:
    - Use PHP’s built-in server:
      php -S localhost:8000
-   - Or start your local server (e.g., XAMPP)
+   - Or start your local server (ex, XAMPP)
 
 6. **Access the Webpage**:
    - Open your browser and navigate to the server address from step 4
