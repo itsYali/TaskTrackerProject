@@ -1,19 +1,20 @@
 # Installation
 
 ## Prerequisites
-1. Install [PHP](https://www.php.net/downloads) (version 7.4 or higher) on your Raspberry Pi and ensure the **php-mysql** extension is enabled/installed
+1. Set up an SSH/Serial connection to your Raspberry Pi using [PuTTY](https://www.putty.org/)
+2. Make sure your Raspberry Pi is connected to your local network and has internet access
+3. Install [PHP](https://www.php.net/downloads) (version 7.4 or higher) on your Raspberry Pi and ensure the **php-mysql** extension is enabled/installed
    - Use the following command to install PHP and required extensions:
      ```bash
      sudo apt update
      sudo apt install php php-mysql
+     sudo systemctl restart apache2
      ```
-2. Install [MariaDB](https://mariadb.org/download/)
+4. Install [MariaDB](https://mariadb.org/download/)
    - Use the following command to install MariaDB:
      ```bash
      sudo apt install mariadb-server
      ```
-3. Set up an SSH/Serial connection to your Raspberry Pi using [PuTTY](https://www.putty.org/)
-4. Make sure your Raspberry Pi is connected to your local network and has internet access
 
 ---
 
@@ -62,10 +63,4 @@
      ```
    - Replace `<raspberry-pi-ip>` with the actual IP address of your Raspberry Pi. 
 
----
 
-## Notes
-- To be sure MariaDB is running on your Raspberry Pi, you can use the command:
-  ```bash
-  sudo systemctl start mariadb
-  ```
