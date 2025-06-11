@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-$filter = $_GET['filter'] ?? 'all';
+$filter = $_GET['filter'] ?? 'incomplete';
 $user_id = $_SESSION['user_id'];
 
 // Build query based on filter
@@ -37,9 +37,9 @@ $tasks = $stmt->fetchAll();
     <div class="filter-section">
         <h3>Filter Tasks:</h3>
         <div class="filter-buttons">
-            <a href="?filter=all" class="btn <?php echo $filter == 'all' ? 'active' : ''; ?>">All</a>
-            <a href="?filter=completed" class="btn <?php echo $filter == 'completed' ? 'active' : ''; ?>">Completed</a>
             <a href="?filter=incomplete" class="btn <?php echo $filter == 'incomplete' ? 'active' : ''; ?>">Incomplete</a>
+            <a href="?filter=completed" class="btn <?php echo $filter == 'completed' ? 'active' : ''; ?>">Completed</a>
+            <a href="?filter=all" class="btn <?php echo $filter == 'all' ? 'active' : ''; ?>">All</a>
         </div>
     </div>
     
