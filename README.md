@@ -35,6 +35,6 @@ Task Tracker is a simple web app that allows users to manage their daily tasks. 
 
 ## Documentation
 
-- [Installation Guide](Installation.md) - Setup instructions for Raspberry Pi
+- [Installation Guide](Installation.md) - Setup instructions
 - [User Guide](UserGuide.md) - How to use the application
 - [Admin Guide](AdminGuide.md) - Configuration and maintenance
