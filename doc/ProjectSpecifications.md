@@ -43,7 +43,7 @@
 | URL Path | HTTP Method(s) | Expected Variables | Session Variables | Database Operations |
 |----------|----------------|-------------------|-------------------|-------------------|
 | `/index.php` | GET | None | `user_id`, `username` (optional) | None |
-| `/register.php` | GET, POST | POST: `username`, `email`, `password`, `confirm_password` | None initially | INSERT into `users` table |
+| `/register.php` | GET, POST | POST: `username`, `password`, `confirm_password` | None initially | INSERT into `users` table |
 | `/login.php` | GET, POST | POST: `username`, `password` | Sets `user_id`, `username` | SELECT from `users` table |
 | `/dashboard.php` | GET | GET: `filter` (optional) | Requires `user_id`, `username` | SELECT from `tasks` table with filters |
 | `/add_task.php` | GET, POST | POST: `task_name`, `target_date` | Requires `user_id` | INSERT into `tasks` table |
