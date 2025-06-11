@@ -7,14 +7,15 @@
 
 ## Installation Steps
 1. **Clone the Repository**:
-   - git clone https://github.com/itsYali/task-tracker-project.git
-   - cd task-tracker-project
+   ```
+   git clone https://github.com/itsYali/task-tracker-project.git
+   cd task-tracker-project
 
-2. **Set Up the Database**:
+3. **Set Up the Database**:
    - Create a new database in MySQL called `task_tracker`
    - Import `database_setup.sql` file into the database you created
 
-3. **Configure the Project**:
+4. **Configure the Project**:
    - Open the `database.php` file in web > config folder
    - Update the database credentials if needed (user is `root` and no password by default):
    ```php
@@ -23,10 +24,10 @@
    $username = '<your_username>';
    $password = '<your_password>';
 
-4. **Start the Server**:
+5. **Start the Server**:
    - Use PHP’s built-in server:
      php -S localhost:8000
    - Or start your local server (e.g., XAMPP)
 
-5. **Access the Webpage**:
+6. **Access the Webpage**:
    - Open your browser and navigate to the server address from step 4
