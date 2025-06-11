@@ -7,8 +7,8 @@
 
 ## Installation Steps
 1. **Clone the Repository**:
-     git clone https://github.com/itsYali/task-tracker-project.git
-     cd task-tracker-project
+   - git clone https://github.com/itsYali/task-tracker-project.git
+   - cd task-tracker-project
 
 2. **Set Up the Database**:
    - Create a new database in MySQL called `task_tracker`
