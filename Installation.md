@@ -1,31 +1,71 @@
 # Installation
 
 ## Prerequisites
-1. Install [PHP](https://www.php.net/downloads) (version 7.4 or higher) and ensure the **php-mysql** extension is enabled/installed
-2. Install [MariaDB](https://mariadb.org/download/) or any other MySQL database server (ex, [MySQL](https://dev.mysql.com/downloads/))
-3. Set up a local server environment (ex, [XAMPP](https://www.apachefriends.org/))
+1. Install [PHP](https://www.php.net/downloads) (version 7.4 or higher) on your Raspberry Pi and ensure the **php-mysql** extension is enabled/installed
+   - Use the following command to install PHP and required extensions:
+     ```bash
+     sudo apt update
+     sudo apt install php php-mysql
+     ```
+2. Install [MariaDB](https://mariadb.org/download/)
+   - Use the following command to install MariaDB:
+     ```bash
+     sudo apt install mariadb-server
+     ```
+3. Set up an SSH/Serial connection to your Raspberry Pi using [PuTTY](https://www.putty.org/)
+4. Make sure your Raspberry Pi is connected to your local network and has internet access
+
+---
 
 ## Installation Steps
 1. **Clone the Repository**:
-   ```
-   git clone https://github.com/itsYali/task-tracker-project.git
-   cd task-tracker-project
-3. **Set Up the Database**:
-   - Create a new database in MySQL called `task_tracker`
-   - Import `database_setup.sql` file into the database you created
+   - SSH/Serial into your Raspberry Pi using PuTTY.
+   - Run the following commands to clone the repository:
+     ```bash
+     git clone https://github.com/itsYali/task-tracker-project.git
+     cd task-tracker-project
+     ```
 
-4. **Configure the Project**:
-   - Open the `database.php` file in web > config folder
-   - Update the database credentials if needed (user is `root` and no password by default):
-   ```php
-   $host = 'localhost';
-   $dbname = 'task_tracker';
-   $username = '<your_username>';
-   $password = '<your_password>';
-5. **Start the Server**:
-   - Use PHP’s built-in server:
-     php -S localhost:8000
-   - Or start your local server (ex, XAMPP)
+2. **Set Up the Database**:
+   - Log in to MariaDB:
+     ```bash
+     sudo mysql -u root
+     ```
+   - Create a new database called `task_tracker`:
+     ```sql
+     CREATE DATABASE task_tracker;
+     ```
+   - Exit MariaDB:
+     ```sql
+     EXIT;
+     ```
+   - Import the `database_setup.sql` file into the database:
+     ```bash
+     mysql -u root task_tracker < web/database_setup.sql
+     ```
 
-6. **Access the Webpage**:
-   - Open your browser and navigate to the server address from step 4
+3. **Start the Server**:
+   - Use PHP’s built-in server to start the application:
+     ```bash
+     php -S 0.0.0.0:8000 -t web
+     ```
+   - This will make the application accessible on your Raspberry Pi’s IP address (e.g., `http://<raspberry-pi-ip>:8000`)
+   - You can find the IP address by running:
+     ```bash
+     hostname -I
+     ```
+
+4. **Access the Webpage**:
+   - Open your browser on your local machine and navigate to:
+     ```
+     http://<raspberry-pi-ip>:8000
+     ```
+   - Replace `<raspberry-pi-ip>` with the actual IP address of your Raspberry Pi. 
+
+---
+
+## Notes
+- To be sure MariaDB is running on your Raspberry Pi, you can use the command:
+  ```bash
+  sudo systemctl start mariadb
+  ```
