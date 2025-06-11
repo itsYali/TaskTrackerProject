@@ -17,6 +17,7 @@
 3. **Configure the Project**:
    - Open the `database.php` file in web > config folder
    - Update the database credentials if needed (user is `root` and no password by default):
+     ```php
      $host = 'localhost';
      $dbname = 'task_tracker';
      $username = '<your_username>';
