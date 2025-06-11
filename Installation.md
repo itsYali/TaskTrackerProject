@@ -11,7 +11,7 @@
    git clone https://github.com/itsYali/task-tracker-project.git
    cd task-tracker-project
 3. **Set Up the Database**:
-   - Create a new database in MySQL called `task_tracker`
+   - Create a new database in MariaDB called `task_tracker`
    - Import `database_setup.sql` file into the database you created
 
 4. **Configure the Project**:
