@@ -10,7 +10,6 @@
    ```
    git clone https://github.com/itsYali/task-tracker-project.git
    cd task-tracker-project
-
 3. **Set Up the Database**:
    - Create a new database in MySQL called `task_tracker`
    - Import `database_setup.sql` file into the database you created
@@ -23,7 +22,6 @@
    $dbname = 'task_tracker';
    $username = '<your_username>';
    $password = '<your_password>';
-
 5. **Start the Server**:
    - Use PHP’s built-in server:
      php -S localhost:8000
