@@ -1,53 +1,36 @@
-**Project Title: Task Tracker**
+# Project Goal
 
+## Project Title
+**Task Tracker**
 
-***High-Level Functionalities:***
-  
-•	Users can add tasks, set target dates, and mark tasks as completed.
-  
-•	Tasks can be filtered by status (complete/incomplete, target date met/missed).
-  
-•	User registration and login system for personal list of tasks.
-  
-  
-**Example Scenarios:**
+## High-Level Functionalities
+- Users can add tasks, set target dates, and mark tasks as completed
+- Tasks can be filtered by status (e.g., complete/incomplete)
+- User registration and login system for managing a personal list of tasks
 
+## Example Scenarios
 
-***Scenario: A user wants to track a new task***
+### Scenario: A User Wants to Track a New Task
+1. **Message Request**:
+   - The user wants to add a new task to the list, including a name and a target date
+
+2. **How It’s Processed**:
+   - The user enters the task name and selects a target date in an "Add Task" form
+   - PHP receives the form data, checks that all required fields are filled, and validates the input
+   - If valid, PHP saves the new task to the database
+
+3. **How the System Responds**:
+   - If the task is added successfully, the system shows a confirmation message and updates the task list to include the new task
+   - If there is an error (such as missing information), the system displays an error message and asks the user to correct it
+
+### Scenario: A User Wants to Filter Their Tasks by Status
+1. **Message request**:
+   - The user wants to view certain tasks by filtering the list (for example by completed, incomplete)
   
-•	*Message request:*
-  
-  The user wants to add a new task to the list, including a name and a target date.
-  
-•	*How it’s processed:*
-  
-  o	The user enters the task name and selects a target date in a “Add Task” form.
-    
-  o	PHP receives the form data, checks that all required fields are filled, and validates the input.
+2. **How it’s processed**:
+   - The user selects a filter option (by clicking a button or choosing from a dropdown menu)
+   - PHP receives the selected filter and queries the database for tasks that match the chosen status
       
-  o	If valid, PHP saves the new task to the database.
-    
-•	*How the system responds:*
-  
-  o	If the task is added successfully, the system shows a confirmation message and updates the task list to include the new task.
-      
-  o	If there is an error (such as missing information), the system displays an error message and asks the user to correct it.
-
-    
-  ***Scenario: A user wants to filter their tasks by status***
-  
-  •	*Message request:*
-  
-  The user wants to view certain tasks by filtering the list (for example by completed, incomplete, target date met, or target date missed).
-  
-  •	*How it’s processed:*
-  
-  o	The user selects a filter option (by clicking a button or choosing from a dropdown menu).
-      
-  o	PHP receives the selected filter and queries the database for tasks that match the chosen status.
-      
-  •	*How the system responds:*
-  
-  o	The system displays an updated list of tasks that meet the filter criteria.
-    
-  o	If no tasks match the filter, the system shows a message like “No tasks found.”
+3. **How the system responds**:
+   - The system displays an updated list of tasks that meet the filter criteria
+   - If no tasks match the filter, the system shows a message like “No tasks found.”
