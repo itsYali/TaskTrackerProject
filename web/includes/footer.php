@@ -1,7 +1,7 @@
     </main>
     <footer>
-        <p>&copy; 2025 Task Tracker</p>
+        <p>&copy; 2025 Task Tracker Demo</p>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="javascript/main.js"></script>
 </body>
 </html>

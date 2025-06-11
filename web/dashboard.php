@@ -21,12 +21,6 @@ switch ($filter) {
     case 'incomplete':
         $where_clause .= " AND is_completed = 0";
         break;
-    case 'overdue':
-        $where_clause .= " AND is_completed = 0 AND target_date < CURDATE()";
-        break;
-    case 'upcoming':
-        $where_clause .= " AND is_completed = 0 AND target_date >= CURDATE()";
-        break;
 }
 
 $stmt = $pdo->prepare("SELECT * FROM tasks $where_clause ORDER BY target_date ASC");
@@ -46,8 +40,6 @@ $tasks = $stmt->fetchAll();
             <a href="?filter=all" class="btn <?php echo $filter == 'all' ? 'active' : ''; ?>">All</a>
             <a href="?filter=completed" class="btn <?php echo $filter == 'completed' ? 'active' : ''; ?>">Completed</a>
             <a href="?filter=incomplete" class="btn <?php echo $filter == 'incomplete' ? 'active' : ''; ?>">Incomplete</a>
-            <a href="?filter=overdue" class="btn <?php echo $filter == 'overdue' ? 'active' : ''; ?>">Overdue</a>
-            <a href="?filter=upcoming" class="btn <?php echo $filter == 'upcoming' ? 'active' : ''; ?>">Upcoming</a>
         </div>
     </div>
     
