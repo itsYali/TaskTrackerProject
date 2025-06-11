@@ -8,7 +8,6 @@
      ```bash
      sudo apt update
      sudo apt install php php-mysql
-     sudo systemctl restart apache2
      ```
 4. Install [MariaDB](https://mariadb.org/download/)
    - Use the following command to install MariaDB:
@@ -62,5 +61,3 @@
      http://<raspberry-pi-ip>:8000
      ```
    - Replace `<raspberry-pi-ip>` with the actual IP address of your Raspberry Pi. 
-
-

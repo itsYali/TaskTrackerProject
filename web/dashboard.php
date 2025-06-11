@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 $filter = $_GET['filter'] ?? 'all';
 $user_id = $_SESSION['user_id'];
 
-// Build query based on filter
+// query based on filter
 $where_clause = "WHERE user_id = ?";
 $params = [$user_id];
 
