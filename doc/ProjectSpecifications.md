@@ -33,7 +33,7 @@
 
 **Pseudo/Limited Implementation:**
 - Basic styling (functional but not polished)
-- Task editing/deletion (not implemented for demo scope)
+- Task editing/deletion (not implemented yet)
 - Advanced user profile management
 
 ## 2. Planned URL Endpoints
