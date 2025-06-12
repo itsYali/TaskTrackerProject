@@ -51,8 +51,9 @@
 ## 3. Database Design
 
 ### a. Entity-Relationship Diagram (ERD)
-
+```mermaid
 erDiagram
+direction lr
     users {
       INT user_id PK
       VARCHAR username
@@ -68,7 +69,7 @@ erDiagram
       TIMESTAMP created_at
     }
     users ||--o{ tasks : "has"
-
+```
 
 **Relationship:** 
    - users have a 1 to Many relationship with tasks
