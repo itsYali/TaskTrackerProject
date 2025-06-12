@@ -52,7 +52,6 @@
 
 ### a. Entity-Relationship Diagram (ERD)
 
-<details> <summary>Click to expand Mermaid ERD code</summary>
 erDiagram
     users {
       INT user_id PK
@@ -69,7 +68,6 @@ erDiagram
       TIMESTAMP created_at
     }
     users ||--o{ tasks : "has"
-</details>
 
 
 **Relationship:** 
