@@ -1,6 +1,7 @@
 # Run-time Requirements
 
 The developed system is designed to run on specific hardware and software platforms as detailed below
+
 *May also be able to run on any compatible hardware (have not tested though)*
 
 ## Hardware Platform
