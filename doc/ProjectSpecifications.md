@@ -55,16 +55,17 @@
 *to be added*
 
 
-**Relationship:** One user can have many tasks, but tasks only belong to their respective user.
+**Relationship:** 
+   - users have a 1 to Many relationship with tasks
+   - tasks have a Many to 1 relationship with users
 
 ## b. Relational Model
 
 ### USERS Table
-| Column Name | Data Type | Constraints |r
+| Column Name | Data Type | Constraints |
 |-------------|-----------|-------------|
 | user_id | INT | AUTO_INCREMENT PRIMARY KEY |
 | username | VARCHAR(50) | UNIQUE NOT NULL |
-| email | VARCHAR(100) | UNIQUE NOT NULL |
 | password_hash | VARCHAR(255) | NOT NULL |
 | created_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP |
 
