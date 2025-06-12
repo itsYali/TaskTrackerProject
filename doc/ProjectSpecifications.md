@@ -52,7 +52,24 @@
 
 ### a. Entity-Relationship Diagram (ERD)
 
-*to be added*
+<details> <summary>Click to expand Mermaid ERD code</summary>
+erDiagram
+    users {
+      INT user_id PK
+      VARCHAR username
+      VARCHAR password_hash
+    }
+    tasks {
+      INT task_id PK
+      INT user_id FK
+      VARCHAR task_name
+      DATE target_date
+      BOOLEAN is_completed
+      DATE completed_date
+      TIMESTAMP created_at
+    }
+    users ||--o{ tasks : "has"
+</details>
 
 
 **Relationship:** 
@@ -67,7 +84,6 @@
 | user_id | INT | AUTO_INCREMENT PRIMARY KEY |
 | username | VARCHAR(50) | UNIQUE NOT NULL |
 | password_hash | VARCHAR(255) | NOT NULL |
-| created_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP |
 
 ### TASKS Table
 | Column Name | Data Type | Constraints |
