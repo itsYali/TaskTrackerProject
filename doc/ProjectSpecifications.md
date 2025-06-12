@@ -75,16 +75,16 @@ direction lr
    - users have a 1 to Many relationship with tasks
    - tasks have a Many to 1 relationship with users
 
-## b. Relational Model
+### b. Relational Model
 
-### USERS Table
+#### USERS Table
 | Column Name | Data Type | Constraints |
 |-------------|-----------|-------------|
 | user_id | INT | AUTO_INCREMENT PRIMARY KEY |
 | username | VARCHAR(50) | UNIQUE NOT NULL |
 | password_hash | VARCHAR(255) | NOT NULL |
 
-### TASKS Table
+#### TASKS Table
 | Column Name | Data Type | Constraints |
 |-------------|-----------|-------------|
 | task_id | INT | AUTO_INCREMENT PRIMARY KEY |
@@ -95,9 +95,9 @@ direction lr
 | completed_date | DATE | NULL |
 | created_at | TIMESTAMP | DEFAULT CURRENT_TIMESTAMP |
 
-## c. Normalization
+### c. Normalization
 
-### Third Normal Form (3NF) Compliance
+#### Third Normal Form (3NF) Compliance
 
 *to be added*
 
