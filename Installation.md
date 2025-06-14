@@ -14,6 +14,11 @@
      ```bash
      sudo apt install mariadb-server
      ```
+5. Install [Git](https://git-scm.com/downloads) (to clone this repository)
+   - Use the following command to install Git:
+     ```bash
+     sudo apt install git
+     ```
 
 ---
 
