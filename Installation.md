@@ -24,7 +24,6 @@
 
 ## Installation Steps
 1. **Clone the Repository**:
-   - SSH/Serial into your Raspberry Pi using PuTTY.
    - Run the following commands to clone the repository:
      ```bash
      git clone https://github.com/itsYali/task-tracker-project.git
@@ -50,17 +49,19 @@
      ```
 
 3. **Start the Server**:
-   - Use PHP’s built-in server to start the application:
-     ```bash
-     php -S 0.0.0.0:8000 -t web
-     ```
-   - This will make the application accessible on your Raspberry Pi’s IP address (e.g., `http://<raspberry-pi-ip>:8000`)
-   - You can find the IP address by running:
+   - *If you don't know your device's IP address, you can find it by running:*
      ```bash
      hostname -I
      ```
+   - Use PHP’s built-in server to start the application:
+     ```bash
+     php -S <raspberry-pi-ip>:8000 -t web
+     ```
+   - Replace `<raspberry-pi-ip>` with the actual IP address of your Raspberry Pi
+   - This will make the application accessible on your Raspberry Pi’s IP address (e.g., `http://<raspberry-pi-ip>:8000`)
+   
 
-4. **Access the Webpage**:
+5. **Access the Webpage**:
    - Open your browser on your local machine and navigate to:
      ```
      http://<raspberry-pi-ip>:8000
