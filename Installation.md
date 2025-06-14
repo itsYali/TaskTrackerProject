@@ -26,7 +26,7 @@
 1. **Clone the Repository**:
    - Run the following commands to clone the repository:
      ```bash
-     git clone https://github.com/itsYali/task-tracker-project.git
+     git clone https://github.com/itsYali/task-tracker
      cd task-tracker-project
      ```
 
